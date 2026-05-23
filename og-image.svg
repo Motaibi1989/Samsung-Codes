@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#0f172a"/>
+  <rect x="70" y="70" width="1140" height="500" rx="36" fill="#111827" stroke="#334155" stroke-width="4"/>
+  <text x="640" y="210" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="64" font-weight="700" fill="#ffffff">Samsung Codes</text>
+  <text x="640" y="305" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="44" fill="#e2e8f0">أكواد سامسونج</text>
+  <text x="640" y="390" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="30" fill="#cbd5e1">شرح عربي + درجة الأمان لكل كود</text>
+  <text x="640" y="475" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="34" fill="#ffffff">Safe • Sensitive • Risky</text>
+</svg>
