@@ -1,6 +1,6 @@
 # 📱 أكواد سامسونج Samsung Codes
 
-![Samsung Codes Poster](og-image.svg)
+![Samsung Codes Poster](samsung-codes-preview-v3.svg)
 
 هذه نسخة مرتبة: **كل الأكواد الشائعة لسامسونج مع تعريف بسيط ودرجة أمان موحدة**.
 
