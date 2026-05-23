@@ -1,8 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
-  <rect width="1280" height="640" fill="#0f172a"/>
-  <rect x="70" y="70" width="1140" height="500" rx="36" fill="#111827" stroke="#334155" stroke-width="4"/>
-  <text x="640" y="210" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="64" font-weight="700" fill="#ffffff">Samsung Codes</text>
-  <text x="640" y="305" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="44" fill="#e2e8f0">أكواد سامسونج</text>
-  <text x="640" y="390" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="30" fill="#cbd5e1">شرح عربي + درجة الأمان لكل كود</text>
-  <text x="640" y="475" text-anchor="middle" font-family="Arial, Tahoma, sans-serif" font-size="34" fill="#ffffff">Safe • Sensitive • Risky</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061226"/><stop offset="0.55" stop-color="#0b1f3a"/><stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity=".45"/></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#38bdf8" stroke-width="1" opacity=".08"/></pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <circle cx="1090" cy="80" r="210" fill="#2563eb" opacity=".13"/>
+  <circle cx="130" cy="570" r="230" fill="#22c55e" opacity=".09"/>
+  <rect x="42" y="42" width="1196" height="556" rx="38" fill="#0b1220" opacity=".92" stroke="#38bdf8" stroke-opacity=".30"/>
+
+  <g transform="translate(86 92)">
+    <text x="0" y="0" font-family="Arial,Tahoma,sans-serif" font-size="38" font-weight="800" fill="#e2e8f0">أكواد سامسونج</text>
+    <text x="0" y="78" font-family="Arial,Tahoma,sans-serif" font-size="78" font-weight="900" letter-spacing="5" fill="#fff">SAMSUNG</text>
+    <text x="0" y="136" font-family="Arial,Tahoma,sans-serif" font-size="46" font-weight="900" letter-spacing="3" fill="#93c5fd">GALAXY CODES</text>
+    <text x="0" y="190" font-family="Arial,Tahoma,sans-serif" font-size="26" font-weight="700" fill="#cbd5e1">دليل سريع للأكواد مع التعريف ودرجة الأمان</text>
+  </g>
+
+  <g transform="translate(100 322)" filter="url(#shadow)">
+    <rect width="220" height="252" rx="36" fill="#030712" stroke="#64748b" stroke-width="4"/>
+    <rect x="17" y="18" width="186" height="216" rx="25" fill="#111827"/>
+    <circle cx="110" cy="31" r="5" fill="#020617" stroke="#475569"/>
+    <text x="110" y="94" text-anchor="middle" font-family="Arial" font-size="44" fill="#e0f2fe">*#06#</text>
+    <text x="110" y="128" text-anchor="middle" font-family="Arial" font-size="14" fill="#cbd5e1">IMEI / Serial Number</text>
+    <text x="60" y="176" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">1</text>
+    <text x="110" y="176" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">2</text>
+    <text x="160" y="176" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">3</text>
+    <text x="60" y="211" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">*</text>
+    <text x="110" y="211" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">0</text>
+    <text x="160" y="211" text-anchor="middle" font-family="Arial" font-size="24" fill="#e5e7eb">#</text>
+    <circle cx="110" cy="225" r="17" fill="#22c55e"/>
+  </g>
+
+  <g font-family="Arial,Tahoma,sans-serif" font-weight="800">
+    <rect x="385" y="108" width="250" height="118" rx="18" fill="#052e16" stroke="#22c55e" stroke-opacity=".7"/>
+    <circle cx="426" cy="151" r="16" fill="#22c55e"/><text x="458" y="158" font-size="31" fill="#dcfce7">آمن</text><text x="414" y="196" font-size="18" fill="#bbf7d0">للعرض والفحص فقط</text>
+    <rect x="665" y="108" width="250" height="118" rx="18" fill="#422006" stroke="#facc15" stroke-opacity=".7"/>
+    <circle cx="706" cy="151" r="16" fill="#facc15"/><text x="738" y="158" font-size="31" fill="#fef9c3">حساس</text><text x="694" y="196" font-size="18" fill="#fde68a">لا تغيّر الإعدادات</text>
+    <rect x="945" y="108" width="230" height="118" rx="18" fill="#450a0a" stroke="#ef4444" stroke-opacity=".7"/>
+    <circle cx="986" cy="151" r="16" fill="#ef4444"/><text x="1018" y="158" font-size="31" fill="#fee2e2">خطر</text><text x="974" y="196" font-size="18" fill="#fecaca">قد يمسح البيانات</text>
+  </g>
+
+  <rect x="385" y="270" width="790" height="214" rx="24" fill="#020617" opacity=".78" stroke="#334155"/>
+  <text x="1125" y="318" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="29" font-weight="900" fill="#fff">أمثلة مهمة</text>
+  <text x="1125" y="365" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="23" fill="#86efac">*#06# — IMEI / Serial</text>
+  <text x="1125" y="405" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="23" fill="#86efac">*#0*# — فحص الشاشة والحساسات</text>
+  <text x="1125" y="445" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="23" fill="#fde047">*#0808# — إعدادات USB</text>
+  <text x="1125" y="485" text-anchor="end" font-family="Arial,Tahoma,sans-serif" font-size="23" fill="#fca5a5">*2767*3855# — Full Factory Reset</text>
+
+  <rect x="385" y="520" width="790" height="54" rx="18" fill="#0f172a" stroke="#475569"/>
+  <text x="780" y="555" text-anchor="middle" font-family="Arial,Tahoma,sans-serif" font-size="20" fill="#e2e8f0">استخدم الأكواد الآمنة للمشاهدة فقط، وخذ نسخة احتياطية قبل Reset أو CSC</text>
 </svg>
