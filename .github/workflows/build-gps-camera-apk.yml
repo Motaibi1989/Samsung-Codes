@@ -1,22 +1,29 @@
 name: Build GPS Camera APK
 
 on:
-  pull_request:
+  push:
     branches:
       - main
     paths:
-      - 'GPSCamera/**'
       - '.github/workflows/build-gps-camera-apk.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Bring GPS Camera source from build branch
+        run: |
+          git fetch origin gps-camera-apk
+          git checkout origin/gps-camera-apk -- GPSCamera
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -29,23 +36,30 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses >/dev/null || true
-
       - name: Ensure Android SDK 35 is installed
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Build debug APK
         working-directory: GPSCamera
         run: gradle --no-daemon assembleDebug
 
-      - name: Prepare APK
-        run: cp GPSCamera/app/build/outputs/apk/debug/app-debug.apk GPSCamera-S25Plus.apk
+      - name: Split APK into text chunks
+        run: |
+          rm -rf gps-camera-output
+          mkdir -p gps-camera-output
+          cp GPSCamera/app/build/outputs/apk/debug/app-debug.apk /tmp/GPSCamera-S25Plus.apk
+          sha256sum /tmp/GPSCamera-S25Plus.apk | awk '{print $1}' > gps-camera-output/SHA256.txt
+          stat -c '%s' /tmp/GPSCamera-S25Plus.apk > gps-camera-output/SIZE.txt
+          base64 -w 0 /tmp/GPSCamera-S25Plus.apk > /tmp/apk.b64
+          split -b 45000 -d -a 3 /tmp/apk.b64 gps-camera-output/part-
+          echo "ready" > gps-camera-output/STATUS.txt
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: GPSCamera-S25Plus
-          path: GPSCamera-S25Plus.apk
-          if-no-files-found: error
-          retention-days: 7
+      - name: Commit APK chunks to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gps-camera-output
+          git commit -m "Build GPS Camera APK chunks" || exit 0
+          git push origin HEAD:main
