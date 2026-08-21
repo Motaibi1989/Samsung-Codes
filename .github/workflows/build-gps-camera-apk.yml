@@ -7,6 +7,12 @@ on:
     paths:
       - 'GPSCamera/**'
       - '.github/workflows/build-gps-camera-apk.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'GPSCamera/**'
+      - '.github/workflows/build-gps-camera-apk.yml'
 
 permissions:
   contents: read
@@ -29,8 +35,11 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Install Android SDK 35
+      - name: Accept Android SDK licenses
         run: yes | sdkmanager --licenses >/dev/null || true
+
+      - name: Ensure Android SDK 35 is installed
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Build debug APK
         working-directory: GPSCamera
